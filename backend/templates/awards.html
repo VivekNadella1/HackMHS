@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Awards and Achievements</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style media="screen">
+        *, *:before, *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #080710;
+        }
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .shape:first-child {
+            background: linear-gradient(#1845ad, #23a2f6);
+            left: -80px;
+            top: -80px;
+        }
+        .shape:last-child {
+            background: linear-gradient(to right, #ff512f, #f09819);
+            right: -30px;
+            bottom: -80px;
+        }
+        form {
+            height: auto;
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+        }
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 30px; /* Added margin for spacing */
+        }
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        input, select {
+            display: block;
+            height: 40px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 2px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        ::placeholder {
+            color: #e5e5e5;
+        }
+        button {
+            margin-top: 20px; /* Adjusted margin for spacing */
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Added CSS for side by side elements */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: space-between;
+        }
+
+        .flex-item {
+            width: calc(30% - 10px); /* Adjust the width as needed */
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form method="post">
+        <h3>Awards and Achievements</h3>
+        {% csrf_token %}
+        
+        <!-- Award 1 -->
+        <div class="flex-container">
+            <div class="flex-item">
+                <label for="award_1">Award 1:</label>
+                <input type="text" id="award_1" name="award_1" placeholder="Enter Award 1" >
+                <label for="award_type_1">Award Type:</label>
+                <select id="award_type_1" name="award_type_1" >
+                    <option style="color: black;" value="">Select Type</option>
+                    <option style="color: black;" value="Academic">Academic</option>
+                    <option style="color: black;" value="Sports">Sports</option>
+                    <option style="color: black;" value="Arts">Arts</option>
+                    <option style="color: black;" value="Community Service">Community Service</option>
+                    <option style="color: black;" value="Leadership">Leadership</option>
+                    <option style="color: black;" value="Music">Music</option>
+                    <option style="color: black;" value="Other">Other</option>
+                </select>
+                <label for="ranking_1">Ranking:</label>
+                <select id="ranking_1" name="ranking_1" >
+                    <option style="color: black;" value="">Select Ranking</option>
+                    <option style="color: black;" value="A">A (National Level)</option>
+                    <option style="color: black;" value="B">B (State Level)</option>
+                    <option style="color: black;" value="C">C (Community Level)</option>
+                    <option style="color: black;" value="D">D (Family Level)</option>
+                </select>
+            </div>
+            <div class="flex-item">
+                <label for="award_2">Award 2:</label>
+                <input type="text" id="award_2" name="award_2" placeholder="Enter Award 2" >
+                <label for="award_type_2">Award Type:</label>
+                <select id="award_type_2" name="award_type_2" >
+                    <option style="color: black;" value="">Select Type</option>
+                    <option style="color: black;" value="Academic">Academic</option>
+                    <option style="color: black;" value="Sports">Sports</option>
+                    <option style="color: black;" value="Arts">Arts</option>
+                    <option style="color: black;" value="Community Service">Community Service</option>
+                    <option style="color: black;" value="Leadership">Leadership</option>
+                    <option style="color: black;" value="Music">Music</option>
+                    <option style="color: black;" value="Other">Other</option>
+                </select>
+                <label for="ranking_2">Ranking:</label>
+                <select id="ranking_2" name="ranking_2" >
+                    <option style="color: black;" value="">Select Ranking</option>
+                    <option style="color: black;" value="A">A (National Level)</option>
+                    <option style="color: black;" value="B">B (State Level)</option>
+                    <option style="color: black;" value="C">C (Community Level)</option>
+                    <option style="color: black;" value="D">D (Family Level)</option>
+                </select>
+            </div>
+            <div class="flex-item">
+                <label for="award_3">Award 3:</label>
+                <input type="text" id="award_3" name="award_3" placeholder="Enter Award 3" >
+                <label for="award_type_3">Award Type:</label>
+                <select id="award_type_3" name="award_type_3" >
+                    <option style="color: black;" value="">Select Type</option>
+                    <option style="color: black;" value="Academic">Academic</option>
+                    <option style="color: black;" value="Sports">Sports</option>
+                    <option style="color: black;" value="Arts">Arts</option>
+                    <option style="color: black;" value="Community Service">Community Service</option>
+                    <option style="color: black;" value="Leadership">Leadership</option>
+                    <option style="color: black;" value="Music">Music</option>
+                    <option style="color: black;" value="Other">Other</option>
+                </select>
+                <label for="ranking_3">Ranking:</label>
+                <select id="ranking_3" name="ranking_3" >
+                    <option style="color: black;" value="">Select Ranking</option>
+                    <option style="color: black;" value="A">A (National Level)</option>
+                    <option style="color: black;" value="B">B (State Level)</option>
+                    <option style="color: black;" value="C">C (Community Level)</option>
+                    <option style="color: black;" value="D">D (Family Level)</option>
+                </select>
+            </div>
+            
+            <div class="flex-item">
+                <label for="award_4">Award 4:</label>
+                <input type="text" id="award_4" name="award_4" placeholder="Enter Award 4" >
+                <label for="award_type_4">Award Type:</label>
+                <select id="award_type_4" name="award_type">
+                    <option style="color: black;" value="">Select Type</option>
+                    <option style="color: black;" value="Academic">Academic</option>
+                    <option style="color: black;" value="Sports">Sports</option>
+                    <option style="color: black;" value="Arts">Arts</option>
+                    <option style="color: black;" value="Community Service">Community Service</option>
+                    <option style="color: black;" value="Leadership">Leadership</option>
+                    <option style="color: black;" value="Music">Music</option>
+                    <option style="color: black;" value="Other">Other</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+    </html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Colleges</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #080710;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: #ffffff;
+            position: relative;
+        }
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+    
+
+        .container {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 45%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            overflow-y: auto;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 70px;
+            margin-top: 70px;
+
+        }
+
+        .college-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .college-item {
+            background-color: rgba(255, 255, 255, 0.07);
+            padding: 15px;
+            font-size: 1em;
+            border-left: 5px solid #373069;
+            transition: background-color 0.3s, transform 0.3s;
+            width: calc(25% - 10px);
+            text-align: right;
+        }
+
+        .college-item:hover {
+            background-color: rgba(255, 255, 255, 0.17);
+            transform: scale(1.02);
+        }
+
+        .greeting {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #080710;
+        }
+        .sort-options {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sort-options label {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .sort-options select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ffffff;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .sort-options select:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+        *,*::before,*::after {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #000000, #000000cb); 
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        .navRight {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 60px;
+            margin-top: 100px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 190px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        button {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #64b5f6;
+            border-radius: 10px;
+            border: 2px black solid;
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+        }
+
+        #buttons {
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 45%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            overflow-y: auto;
+        }
+
+        .college-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .college-item {
+            background-color: rgba(255, 255, 255, 0.07);
+            background-image: url("https://lh3.googleusercontent.com/pw/AP1GczPe0Dtc0HLAYA4V7KlaJk6EyqQ8NbVz7xPTBe7iQCofrgHBLiHgsj4egvs9W8SU0ZxQxXEIeAOyarr-lHi0D1OvENIADaFPSZ2wUm_W-f2IZGF_2SB5MKzvoqafa-4KgZyaiObJKbxdIq_DWTGgGRQb=w1000-h1000-s-no-gm?authuser=1");
+            padding: 15px;
+            font-size: 1em;
+            border-left: 5px solid #373069;
+            transition: background-color 0.3s, transform 0.3s;
+            width: calc(25% - 10px);
+            text-align: right;
+        }
+
+        .college-item:hover {
+                background-color: rgba(255, 255, 255, 0.17);
+                transform: scale(1.02);
+            }
+
+        .greeting {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #080710;
+        }
+
+        .sort-options {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sort-options label {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .sort-options select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ffffff;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .sort-options select:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img jsname="uLHQEd" class="BiCYpc" width="40" height="40" src="https://lh3.googleusercontent.com/pw/AP1GczMdYKlUq_q-30Jvr5t48iIiyymqyaIjopiW8fUxKbf4ks9N3tUTUY4iOsL7hMG27xLeMHRdC3beOjXPLDOW8Z0OUHwvYjNL4gUJQL6U2Ilb82O8cWQDhO7YSfDs2UHlu2AzQAtQrCKWUUBbXKbhnvJx=w400-h400-s-no-gm?authuser=1" data-iml="7079.799999952316" style="transform: translate3d(0px, 0px, 0px) rotate(0deg); margin: 20px;" aria-label="Photo - Square - May 18, 2024, 12:44:19 AM">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'college' %}">Colleges Chancing</a>
+        <a href="{% url 'college_tips' %}">College Tips</a>
+        {% if user.is_authenticated %}
+        <div class="navRight">
+            <a href="">Hi, {{ username }}</a>
+            <a href="logout" class="btn">Logout</a>
+        </div>
+        {% else %}
+        <div class="navRight">
+            <a href="login">Login</a><a href="signup">Sign Up</a>
+        </div>
+        {% endif %}
+    </nav>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="container">
+        <h3>See Your College Chances</h3>
+    
+        <div id="college-list" class="college-list"></div>
+    </div>
+    <div class="college-item" data-name="Harvard University" data-excerpt="Harvard is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally.">
+    </div>
+    <div class="greeting">Hi, {{ username }}</div>
+    <script>
+        const colleges = [
+            { name: "California Institute of Technology (Caltech)", rate: "2.7%", excerpt: "Caltech is a world-renowned science and engineering institute that marshals some of the world's brightest minds and most innovative tools to address fundamental scientific questions." },
+            { name: "Harvard University", rate: "3.2%", excerpt: "Harvard is devoted to excellence in teaching, learning, and research, and to developing leaders in many disciplines who make a difference globally." },
+            { name: "Stanford University", rate: "3.7%", excerpt: "Stanford University, one of the world's leading teaching and research institutions, is dedicated to finding solutions to big challenges and to preparing students for leadership in a complex world." },
+            { name: "Massachusetts Institute of Technology (MIT)", rate: "4%", excerpt: "MIT is a world-renowned, independent research university that advances knowledge in science, technology, and other areas of scholarship to make a better world." },
+            { name: "Yale University", rate: "4.6%", excerpt: "Yale is committed to improving the world today and for future generations through outstanding research and scholarship, education, preservation, and practice." },
+            { name: "Columbia University", rate: "3.9%", excerpt: "Columbia University is one of the world's most important centers of research and at the same time a distinctive and distinguished learning environment for undergraduates and graduate students in many scholarly and professional fields." },
+            { name: "Princeton University", rate: "6%", excerpt: "Princeton is a vibrant community of scholarship and learning that stands in the nation's service and the service of humanity." },
+            { name: "University of Chicago", rate: "5.4%", excerpt: "UChicago is an urban research university that has driven new ways of thinking since 1890." },
+            { name: "Brown University", rate: "5.1%", excerpt: "Brown is a leading research university distinct for its student-centered learning and deep sense of purpose." },
+            { name: "Duke University", rate: "6.3%", excerpt: "Duke University has about 13,000 undergraduate and graduate students and a world-class faculty helping to expand the frontiers of knowledge." },
+            { name: "University of Pennsylvania", rate: "6.5%", excerpt: "Penn is committed to creating a community of students, scholars, and staff that reflects the diversity of the world we live in." },
+            { name: "Northwestern University", rate: "7.2%", excerpt: "Northwestern University is a private research university with campuses in Evanston and Chicago, Illinois, and Doha, Qatar, and academic programs across the globe." },
+            { name: "Johns Hopkins University", rate: "7.3%", excerpt: "Johns Hopkins is America’s first research university, founded on the principle that by pursuing big ideas and sharing what we learn, we make the world a better place." },
+            { name: "Cornell University", rate: "7.5%", excerpt: "Cornell is a privately endowed research university and a partner of the State University of New York." },
+            { name: "University of California, Los Angeles (UCLA)", rate: "8.6%", excerpt: "UCLA is known worldwide for the breadth and quality of its academic, research, health care, cultural, continuing education, and athletics programs." },
+            { name: "University of Southern California (USC)", rate: "9.2%", excerpt: "USC is one of the world's leading private research universities, located in the heart of Los Angeles." },
+            { name: "University of California, Berkeley", rate: "11.3%", excerpt: "UC Berkeley is the flagship institution of the ten research universities affiliated with the University of California system." },
+            { name: "Washington University in St. Louis", rate: "11.8%", excerpt: "Washington University creates an environment to encourage and support an ethos of wide-ranging exploration." },
+            { name: "University of Michigan - Ann Arbor", rate: "17.7%", excerpt: "U-M provides outstanding undergraduate, graduate, and professional education, serving the local, regional, national, and international communities." },
+            { name: "University of Notre Dame", rate: "13%", excerpt: "Notre Dame is a Catholic academic community of higher learning, animated from its origins by the Congregation of Holy Cross." }
+        ];
+    
+        const admissionProbabilities = {{ admission_probabilities | safe }};
+    
+    const collegeList = document.getElementById('college-list');
+
+    function renderColleges(sortBy) {
+        collegeList.innerHTML = '';
+        let sortedColleges;
+        if (sortBy === 'acceptance') {
+            sortedColleges = colleges.slice().sort((a, b) => parseFloat(a.rate) - parseFloat(b.rate));
+        } else if (sortBy === 'probability') {
+            sortedColleges = colleges.slice().sort((a, b) => admissionProbabilities[a.name] - admissionProbabilities[b.name]);
+        }
+
+        sortedColleges.forEach(college => {
+            const div = document.createElement('div');
+            div.className = 'college-item';
+            const admissionProbability = admissionProbabilities[college.name] * 100;
+            div.innerHTML = `${college.name}<br>Acceptance Rate: ${college.rate}<br>Admission Probability: ${(admissionProbability || 0).toFixed(2)}%`;
+            collegeList.appendChild(div);
+        });
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const sortBy = event.target.querySelector('#sort-select').value;
+        renderColleges(sortBy);
+    }
+
+    renderColleges('acceptance');
+
+    document.getElementById('sort-form').addEventListener('submit', handleSubmit);
+    const collegeItems = document.querySelectorAll('.college-item');
+
+</script>
+</body>
+</html>

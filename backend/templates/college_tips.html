@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>CollegeFit - Weakest Point</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>CollegeFit - Weakest Point</title>
+    <style>
+        body {
+            background-color: #080710;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .weakest-point {
+            background-color: #ff6347;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .weakest-point span {
+            font-weight: bold;
+            color: #000;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #64b5f6;
+            border-radius: 10px;
+            border: none;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+            transform: scale(1.05);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tips-box {
+            background-color: #4caf50;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tips-box h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .tips-box p {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CollegeFit</h1>
+        <h2>Your Weakest Point</h2>
+        <div class="weakest-point">
+            Your weakest point is: <span id="weakest-point-value">{{lowest_score_type}}</span>
+        </div>
+        <div class="tips-box">
+            {% if lowest_score_type == 'AP Courses' %}
+            <h3>Tips for Improving AP Scores:</h3>
+            <p>If your AP scores are your weakest point, consider taking additional subject-specific classes or seeking tutoring to improve your grades. Additionally, focus on subjects that are heavily weighted in your desired college's admissions criteria.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WDZrU9KM5Y4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% elif lowest_score_type == 'GPA' %}
+            <h3>Tips for Boosting GPA:</h3>
+            <p>If your GPA is your weakest point, prioritize studying and completing assignments on time to boost your grades. Consider seeking help from teachers or tutors if you're struggling with any subjects.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gk5FEFf8Guo" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% elif lowest_score_type == 'SAT' %}
+            <h3>Tips for SAT Preparation:</h3>
+            <p>If your SAT/ACT score is your weakest point, dedicate time to prepare for the exam by taking practice tests, reviewing content, and familiarizing yourself with the test format. Consider enrolling in an SAT prep course or using online resources.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B6ODgatoeO8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% elif lowest_score_type == 'ECS' %}
+            <h3>Tips for Enhancing Extracurricular Activities:</h3>
+            <p>If your extracurricular activities (ECS) are your weakest point, consider joining clubs, sports teams, or community organizations to demonstrate your interests and skills outside of academics. Look for opportunities to take on leadership roles or participate in meaningful projects.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JJR1Etl8pSA" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+        </div>
+            </a><a href="{% url 'homepage' %}"><button>Back to Home</button></a>
+
+    </div

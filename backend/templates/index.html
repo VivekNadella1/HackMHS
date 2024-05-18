@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <title>CollegeFit</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #000000, #000000cb);
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .navbar {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #ffcc00;
+            color: #333;
+        }
+
+        .navRight {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 190px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        button {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #64b5f6;
+            border-radius: 10px;
+            border: 2px black solid;
+            display: inline-block;
+            color: black;
+            font-weight: bold;
+        }
+
+        #buttons {
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            background-color: rgba(255, 255, 255, 0.13);
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 45%;
+            left: 50%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+            overflow-y: auto;
+        }
+
+        .college-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .college-item {
+            background-color: rgba(255, 255, 255, 0.07);
+            background-image: url("https://lh3.googleusercontent.com/pw/AP1GczPe0Dtc0HLAYA4V7KlaJk6EyqQ8NbVz7xPTBe7iQCofrgHBLiHgsj4egvs9W8SU0ZxQxXEIeAOyarr-lHi0D1OvENIADaFPSZ2wUm_W-f2IZGF_2SB5MKzvoqafa-4KgZyaiObJKbxdIq_DWTGgGRQb=w1000-h1000-s-no-gm?authuser=1");
+            padding: 15px;
+            font-size: 1em;
+            border-left: 5px solid #373069;
+            transition: background-color 0.3s, transform 0.3s;
+            width: calc(25% - 10px);
+            text-align: right;
+        }
+
+        .college-item:hover {
+            background-color: rgba(255, 255, 255, 0.17);
+            transform: scale(1.02);
+        }
+
+        .greeting {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #080710;
+        }
+
+        .sort-options {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sort-options label {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #ffffff;
+        }
+
+        .sort-options select {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ffffff;
+            background-color: transparent;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .sort-options select:focus {
+            outline: none;
+            border-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img class="BiCYpc" width="40" height="40" src="https://lh3.googleusercontent.com/pw/AP1GczMdYKlUq_q-30Jvr5t48iIiyymqyaIjopiW8fUxKbf4ks9N3tUTUY4iOsL7hMG27xLeMHRdC3beOjXPLDOW8Z0OUHwvYjNL4gUJQL6U2Ilb82O8cWQDhO7YSfDs2UHlu2AzQAtQrCKWUUBbXKbhnvJx=w400-h400-s-no-gm?authuser=1" alt="Logo" style="margin: 20px;">
+        <a href="{% url 'homepage' %}">Home</a>
+        <a href="{% url 'college' %}">Colleges Chancing</a>
+        <a href="{% url 'college_tips' %}">Colleges Tips</a>
+        {% if user.is_authenticated %}
+        <div class="navRight">
+            <a href="">Hi, {{ username }}</a>
+            <a href="logout" class="btn">Logout</a>
+        </div>
+        {% else %}
+        <div class="navRight">
+            <a href="login">Login</a>
+            <a href="signup">Sign Up</a>
+        </div>
+        {% endif %}
+    </nav>
+
+    <h1>CollegeFit</h1>
+    <h2>The perfect place to find your match for colleges!</h2>
+    <p style="margin: 10px 200px;">Welcome to CollegeFit, your premier destination for streamlining the college application process. We're delighted you've discovered our platform, as it promises to simplify your journey toward your dream college. Here, you can effortlessly input all pertinent statistics, ranging from test scores to GPA and extracurricular activities. Leveraging this information, we'll meticulously assess your likelihood of acceptance into the top 20 colleges in New York State.</p>
+
+    <img class="BiCYpc" width="940" height="141" src="https://lh3.googleusercontent.com/pw/AP1GczPkd8OGTi4ORP9VBdUBJN7WWdfZK_neE5dWDuwysPksRvxU96NoyEsZtJvPrtilWKvIZGTV3cMw1mWhoepiYHbarZsaoX0cfcCJiz3WeOvksxgnmrUSfJKzO8kmCPtEOZUALrDJ1lzoLpLtrXlue5YT=w1000-h150-s-no-gm?authuser=1" alt="Banner" style="display: block; margin: auto;">
+
+    <div class="background">
+        <div class="shape"></div>
+    </div>
+</body>
+</html>
