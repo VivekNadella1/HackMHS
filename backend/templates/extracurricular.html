@@ -1,383 +1,383 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <title>Extracurricular Activities</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-        <style media="screen">
-            *, *:before, *:after {
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
-            }
-            body {
-                background-color: #080710;
-            }
-            .background {
-                width: 430px;
-                height: 520px;
-                position: absolute;
-                transform: translate(-50%, -50%);
-                left: 50%;
-                top: 50%;
-            }
-            .background .shape {
-                height: 200px;
-                width: 200px;
-                position: absolute;
-                border-radius: 50%;
-            }
-            .shape:first-child {
-                background: linear-gradient(#1845ad, #23a2f6);
-                left: -80px;
-                top: -80px;
-            }
-            .shape:last-child {
-                background: linear-gradient(to right, #ff512f, #f09819);
-                right: -30px;
-                bottom: -80px;
-            }
-            form {
-                height: auto;
-                width: 100%;
-                max-width: 1200px; 
-                margin: 0 auto;
-                background-color: rgba(255, 255, 255, 0.13);
-                border-radius: 10px;
-                backdrop-filter: blur(10px);
-                border: 2px solid rgba(255, 255, 255, 0.1);
-                box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-                padding: 50px 35px;
-            }
-            form * {
-                font-family: 'Poppins', sans-serif;
-                color: #ffffff;
-                letter-spacing: 0.5px;
-                outline: none;
-                border: none;
-            }
-            form h3 {
-                font-size: 32px;
-                font-weight: 500;
-                line-height: 42px;
-                text-align: center;
-                margin-bottom: 30px; /* Added margin for spacing */
-            }
-            label {
-                display: block;
-                margin-top: 30px;
-                font-size: 16px;
-                font-weight: 500;
-            }
-            input, select {
-                display: block;
-                height: 40px;
-                width: 100%;
-                background-color: rgba(255, 255, 255, 0.07);
-                border-radius: 3px;
-                padding: 0 10px;
-                margin-top: 2px;
-                font-size: 14px;
-                font-weight: 300;
-            }
-            ::placeholder {
-                color: #e5e5e5;
-            }
-            button {
-                margin-top: 20px; /* Adjusted margin for spacing */
-                width: 100%;
-                background-color: #ffffff;
-                color: #080710;
-                padding: 15px 0;
-                font-size: 18px;
-                font-weight: 600;
-                border-radius: 5px;
-                cursor: pointer;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Extracurricular Activities</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style media="screen">
+        *, *:before, *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #080710;
+        }
+        .background {
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+        }
+        .background .shape {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .shape:first-child {
+            background: linear-gradient(#1845ad, #23a2f6);
+            left: -80px;
+            top: -80px;
+        }
+        .shape:last-child {
+            background: linear-gradient(to right, #ff512f, #f09819);
+            right: -30px;
+            bottom: -80px;
+        }
+        form {
+            height: auto;
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.13);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 50px 35px;
+        }
+        form * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+            margin-bottom: 30px; /* Added margin for spacing */
+        }
+        label {
+            display: block;
+            margin-top: 30px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        input, select {
+            display: block;
+            height: 40px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 2px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        ::placeholder {
+            color: #e5e5e5;
+        }
+        button {
+            margin-top: 20px; /* Adjusted margin for spacing */
+            width: 100%;
+            background-color: #ffffff;
+            color: #080710;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-            /* Added CSS for side by side elements */
-            .flex-container {
-                display: flex;
-                flex-wrap: wrap; /* Allow wrapping */
-                justify-content: space-between;
-            }
+        /* Added CSS for side by side elements */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: space-between;
+        }
 
-            .flex-item {
-                width: calc(30% - 10px); /* Adjust the width as needed */
-                margin-bottom: 20px; /* Added margin for spacing */
-            }
-        </style>
-    </head>
-    <body>
-        <div class="background">
-            <div class="shape"></div>
-            <div class="shape"></div>
-        </div>
-        <form method="post">
-            <h3>Extracurricular Activities</h3>
-            {% csrf_token %}
-            
-            <!-- Extracurricular 1 -->
-            <div class="flex-container">
-                <div class="flex-item">
-                    <label for="extracurricular_1">Extracurricular 1:</label>
-                    <input type="text" id="extracurricular_1" name="extracurricular_1" placeholder="Enter Extracurricular 1" >
-                    <label for="extracurricular_type_1">Extracurricular Type:</label>
-                    <select id="extracurricular_type_1" name="extracurricular_type_1" >
-                        <option style="color: black;" value="">Select Type</option>
-                        <option style="color: black;" value="Volunteering">Volunteering</option>
-                        <option style="color: black;" value="Research">Research</option>
-                        <option style="color: black;" value="Internship">Internship</option>
-                        <option style="color: black;" value="Clubs">Clubs</option>
-                        <option style="color: black;" value="Leadership">Leadership</option>
-                        <option style="color: black;" value="Music">Music</option>
-                        <option style="color: black;" value="Sports">Sports</option>
-                        <option style="color: black;" value="Robotics">Robotics</option>
-                        <option style="color: black;" value="Olympiads">Olympiads</option>
-                        <option style="color: black;" value="Non Profits">Non Profits</option>
-                    </select>
-                    <label for="ranking_1">Ranking:</label>
-                    <select id="ranking_1" name="ranking_1" >
-                        <option style="color: black;" value="">Select Ranking</option>
-                        <option style="color: black;" value="A">A (National Level)</option>
-                        <option style="color: black;" value="B">B (State Level)</option>
-                        <option style="color: black;" value="C">C (Community Level)</option>
-                        <option style="color: black;" value="D">D (Family Level)</option>
-                    </select>
-                </div>
-    <div class="flex-item">
-        <label for="extracurricular_2">Extracurricular 2:</label>
-        <input type="text" id="extracurricular_2" name="extracurricular_2" placeholder="Enter Extracurricular 2" >
-        <label for="extracurricular_type_2">Extracurricular Type:</label>
-        <select id="extracurricular_type_2" name="extracurricular_type_2" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_2">Ranking:</label>
-        <select id="ranking_2" name="ranking_2" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
+        .flex-item {
+            width: calc(30% - 10px); /* Adjust the width as needed */
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
     </div>
+    <form method="post">
+        <h3>Extracurricular Activities</h3>
+        {% csrf_token %}
+        
+        <!-- Extracurricular 1 -->
+        <div class="flex-container">
+            <div class="flex-item">
+                <label for="extracurricular_1">Extracurricular 1:</label>
+                <input type="text" id="extracurricular_1" name="extracurricular_1" placeholder="Enter Extracurricular 1" >
+                <label for="extracurricular_type_1">Extracurricular Type:</label>
+                <select id="extracurricular_type_1" name="extracurricular_type_1" >
+                    <option style="color: black;" value="">Select Type</option>
+                    <option style="color: black;" value="Volunteering">Volunteering</option>
+                    <option style="color: black;" value="Research">Research</option>
+                    <option style="color: black;" value="Internship">Internship</option>
+                    <option style="color: black;" value="Clubs">Clubs</option>
+                    <option style="color: black;" value="Leadership">Leadership</option>
+                    <option style="color: black;" value="Music">Music</option>
+                    <option style="color: black;" value="Sports">Sports</option>
+                    <option style="color: black;" value="Robotics">Robotics</option>
+                    <option style="color: black;" value="Olympiads">Olympiads</option>
+                    <option style="color: black;" value="Non Profits">Non Profits</option>
+                </select>
+                <label for="ranking_1">Ranking:</label>
+                <select id="ranking_1" name="ranking_1" >
+                    <option style="color: black;" value="">Select Ranking</option>
+                    <option style="color: black;" value="A">A (National Level)</option>
+                    <option style="color: black;" value="B">B (State Level)</option>
+                    <option style="color: black;" value="C">C (Community Level)</option>
+                    <option style="color: black;" value="D">D (Family Level)</option>
+                </select>
+            </div>
+<div class="flex-item">
+    <label for="extracurricular_2">Extracurricular 2:</label>
+    <input type="text" id="extracurricular_2" name="extracurricular_2" placeholder="Enter Extracurricular 2" >
+    <label for="extracurricular_type_2">Extracurricular Type:</label>
+    <select id="extracurricular_type_2" name="extracurricular_type_2" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_2">Ranking:</label>
+    <select id="ranking_2" name="ranking_2" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div>
 
-    <!-- Extracurricular 3 -->
-    <div class="flex-item">
-        <label for="extracurricular_3">Extracurricular 3:</label>
-        <input type="text" id="extracurricular_3" name="extracurricular_3" placeholder="Enter Extracurricular 3" >
-        <label for="extracurricular_type_3">Extracurricular Type:</label>
-        <select id="extracurricular_type_3" name="extracurricular_type_3" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_3">Ranking:</label>
-        <select id="ranking_3" name="ranking_3" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div>
+<!-- Extracurricular 3 -->
+<div class="flex-item">
+    <label for="extracurricular_3">Extracurricular 3:</label>
+    <input type="text" id="extracurricular_3" name="extracurricular_3" placeholder="Enter Extracurricular 3" >
+    <label for="extracurricular_type_3">Extracurricular Type:</label>
+    <select id="extracurricular_type_3" name="extracurricular_type_3" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_3">Ranking:</label>
+    <select id="ranking_3" name="ranking_3" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div>
 
-    <!-- Extracurricular 4 -->
-    <div class="flex-item">
-        <label for="extracurricular_4">Extracurricular 4:</label>
-        <input type="text" id="extracurricular_4" name="extracurricular_4" placeholder="Enter Extracurricular 4" >
-        <label for="extracurricular_type_4">Extracurricular Type:</label>
-        <select id="extracurricular_type_4" name="extracurricular_type_4" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_4">Ranking:</label>
-        <select id="ranking_4" name="ranking_4" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div>
-    <div class="flex-item">
-        <label for="extracurricular_5">Extracurricular 5:</label>
-        <input type="text" id="extracurricular_5" name="extracurricular_5" placeholder="Enter Extracurricular 5" >
-        <label for="extracurricular_type_5">Extracurricular Type:</label>
-        <select id="extracurricular_type_5" name="extracurricular_type_5" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_5">Ranking:</label>
-        <select id="ranking_5" name="ranking_5" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div>
-    <div class="flex-item">
-        <label for="extracurricular_6">Extracurricular 6:</label>
-        <input type="text" id="extracurricular_6" name="extracurricular_6" placeholder="Enter Extracurricular 6" >
-        <label for="extracurricular_type_6">Extracurricular Type:</label>
-        <select id="extracurricular_type_6" name="extracurricular_type_6" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_6">Ranking:</label>
-        <select id="ranking_6" name="ranking_6" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div>
-    <div class="flex-item">
-        <label for="extracurricular_7">Extracurricular 7:</label>
-        <input type="text" id="extracurricular_7" name="extracurricular_7" placeholder="Enter Extracurricular 7" >
-        <label for="extracurricular_type_7">Extracurricular Type:</label>
-        <select id="extracurricular_type_7" name="extracurricular_type_7" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_7">Ranking:</label>
-        <select id="ranking_7" name="ranking_7" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div><div class="flex-item">
-        <label for="extracurricular_8">Extracurricular 8:</label>
-        <input type="text" id="extracurricular_8" name="extracurricular_8" placeholder="Enter Extracurricular 8" >
-        <label for="extracurricular_type_8">Extracurricular Type:</label>
-        <select id="extracurricular_type_8" name="extracurricular_type_8" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_8">Ranking:</label>
-        <select id="ranking_8" name="ranking_8" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div><div class="flex-item">
-        <label for="extracurricular_9">Extracurricular 9:</label>
-        <input type="text" id="extracurricular_9" name="extracurricular_9" placeholder="Enter Extracurricular 9" >
-        <label for="extracurricular_type_9">Extracurricular Type:</label>
-        <select id="extracurricular_type_9" name="extracurricular_type_9" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_9">Ranking:</label>
-        <select id="ranking_9" name="ranking_9" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div><div class="flex-item">
-        <label for="extracurricular_10">Extracurricular 10:</label>
-        <input type="text" id="extracurricular_10" name="extracurricular_10" placeholder="Enter Extracurricular 10" >
-        <label for="extracurricular_type_10">Extracurricular Type:</label>
-        <select id="extracurricular_type_10" name="extracurricular_type_10" >
-            <option style="color: black;" value="">Select Type</option>
-            <option style="color: black;" value="Volunteering">Volunteering</option>
-            <option style="color: black;" value="Research">Research</option>
-            <option style="color: black;" value="Internship">Internship</option>
-            <option style="color: black;" value="Clubs">Clubs</option>
-            <option style="color: black;" value="Leadership">Leadership</option>
-            <option style="color: black;" value="Music">Music</option>
-            <option style="color: black;" value="Sports">Sports</option>
-            <option style="color: black;" value="Robotics">Robotics</option>
-            <option style="color: black;" value="Olympiads">Olympiads</option>
-            <option style="color: black;" value="Non Profits">Non Profits</option>
-        </select>
-        <label for="ranking_10">Ranking:</label>
-        <select id="ranking_10" name="ranking_10" >
-            <option style="color: black;" value="">Select Ranking</option>
-            <option style="color: black;" value="A">A (National Level)</option>
-            <option style="color: black;" value="B">B (State Level)</option>
-            <option style="color: black;" value="C">C (Community Level)</option>
-            <option style="color: black;" value="D">D (Family Level)</option>
-        </select>
-    </div>
-        <button type="submit">Submit</button>
+<!-- Extracurricular 4 -->
+<div class="flex-item">
+    <label for="extracurricular_4">Extracurricular 4:</label>
+    <input type="text" id="extracurricular_4" name="extracurricular_4" placeholder="Enter Extracurricular 4" >
+    <label for="extracurricular_type_4">Extracurricular Type:</label>
+    <select id="extracurricular_type_4" name="extracurricular_type_4" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_4">Ranking:</label>
+    <select id="ranking_4" name="ranking_4" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div>
+<div class="flex-item">
+    <label for="extracurricular_5">Extracurricular 5:</label>
+    <input type="text" id="extracurricular_5" name="extracurricular_5" placeholder="Enter Extracurricular 5" >
+    <label for="extracurricular_type_5">Extracurricular Type:</label>
+    <select id="extracurricular_type_5" name="extracurricular_type_5" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_5">Ranking:</label>
+    <select id="ranking_5" name="ranking_5" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div>
+<div class="flex-item">
+    <label for="extracurricular_6">Extracurricular 6:</label>
+    <input type="text" id="extracurricular_6" name="extracurricular_6" placeholder="Enter Extracurricular 6" >
+    <label for="extracurricular_type_6">Extracurricular Type:</label>
+    <select id="extracurricular_type_6" name="extracurricular_type_6" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_6">Ranking:</label>
+    <select id="ranking_6" name="ranking_6" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div>
+<div class="flex-item">
+    <label for="extracurricular_7">Extracurricular 7:</label>
+    <input type="text" id="extracurricular_7" name="extracurricular_7" placeholder="Enter Extracurricular 7" >
+    <label for="extracurricular_type_7">Extracurricular Type:</label>
+    <select id="extracurricular_type_7" name="extracurricular_type_7" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_7">Ranking:</label>
+    <select id="ranking_7" name="ranking_7" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div><div class="flex-item">
+    <label for="extracurricular_8">Extracurricular 8:</label>
+    <input type="text" id="extracurricular_8" name="extracurricular_8" placeholder="Enter Extracurricular 8" >
+    <label for="extracurricular_type_8">Extracurricular Type:</label>
+    <select id="extracurricular_type_8" name="extracurricular_type_8" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_8">Ranking:</label>
+    <select id="ranking_8" name="ranking_8" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div><div class="flex-item">
+    <label for="extracurricular_9">Extracurricular 9:</label>
+    <input type="text" id="extracurricular_9" name="extracurricular_9" placeholder="Enter Extracurricular 9" >
+    <label for="extracurricular_type_9">Extracurricular Type:</label>
+    <select id="extracurricular_type_9" name="extracurricular_type_9" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_9">Ranking:</label>
+    <select id="ranking_9" name="ranking_9" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div><div class="flex-item">
+    <label for="extracurricular_10">Extracurricular 10:</label>
+    <input type="text" id="extracurricular_10" name="extracurricular_10" placeholder="Enter Extracurricular 10" >
+    <label for="extracurricular_type_10">Extracurricular Type:</label>
+    <select id="extracurricular_type_10" name="extracurricular_type_10" >
+        <option style="color: black;" value="">Select Type</option>
+        <option style="color: black;" value="Volunteering">Volunteering</option>
+        <option style="color: black;" value="Research">Research</option>
+        <option style="color: black;" value="Internship">Internship</option>
+        <option style="color: black;" value="Clubs">Clubs</option>
+        <option style="color: black;" value="Leadership">Leadership</option>
+        <option style="color: black;" value="Music">Music</option>
+        <option style="color: black;" value="Sports">Sports</option>
+        <option style="color: black;" value="Robotics">Robotics</option>
+        <option style="color: black;" value="Olympiads">Olympiads</option>
+        <option style="color: black;" value="Non Profits">Non Profits</option>
+    </select>
+    <label for="ranking_10">Ranking:</label>
+    <select id="ranking_10" name="ranking_10" >
+        <option style="color: black;" value="">Select Ranking</option>
+        <option style="color: black;" value="A">A (National Level)</option>
+        <option style="color: black;" value="B">B (State Level)</option>
+        <option style="color: black;" value="C">C (Community Level)</option>
+        <option style="color: black;" value="D">D (Family Level)</option>
+    </select>
+</div>
+    <button type="submit">Submit</button>

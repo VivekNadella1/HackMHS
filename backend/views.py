@@ -515,5 +515,3 @@ def college_tips(request):
     'lowest_score_type': min_score_type
 }
     return render(request, 'college_tips.html', context)
-
-

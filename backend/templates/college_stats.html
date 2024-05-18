@@ -128,8 +128,8 @@
 <nav class="navbar">
     <img jsname="uLHQEd" class="BiCYpc" width="40" height="40" src="https://lh3.googleusercontent.com/pw/AP1GczMdYKlUq_q-30Jvr5t48iIiyymqyaIjopiW8fUxKbf4ks9N3tUTUY4iOsL7hMG27xLeMHRdC3beOjXPLDOW8Z0OUHwvYjNL4gUJQL6U2Ilb82O8cWQDhO7YSfDs2UHlu2AzQAtQrCKWUUBbXKbhnvJx=w400-h400-s-no-gm?authuser=1" data-iml="7079.799999952316" style="transform: translate3d(0px, 0px, 0px) rotate(0deg); margin: 20px;" aria-label="Photo - Square - May 18, 2024, 12:44:19 AM">
     <a href="homepage" class="navLink">Home</a>
-    <a href="{% url 'college' %}" class="navLink">eee</a>
-    <a href="internships" class="navLink">Internships</a>
+    <a href="{% url 'college' %}" class="navLink">College Chancing</a>
+    <a href="{% url 'college_tips' %}" class="navLink">College Tips</a>
     {% if user.is_authenticated %}
     <a href="" class="navRight"> Hi, {{ username }}</a>
     {% else %}
@@ -145,10 +145,43 @@
     {% csrf_token %}
     <h3>High School Stats</h3>
 
-    {% for field in ['GPA', 'SAT Score', 'ACT Score', 'Race', 'Gender', 'Income'] %}
-    <label for="{{ field|lower }}" style="color: white;">{{ field }}</label>
-    <input type="number" min="0" max="4.0" placeholder="{{ field }}" id="{{ field|lower }}" name="{{ field|lower }}" {% if field == 'GPA' %}step="0.01" required{% endif %}>
-    {% endfor %}
+    <label for="gpa" style="color: white;">GPA</label>
+    <input type="number" step="0.01" min="0" max="4.0" placeholder="GPA" id="gpa" name="gpa" required>
+
+    <label for="sat" style="color: white;">SAT</label>
+    <input type="number" min="400" max="1600" placeholder="SAT Score" id="sat" name="sat">
+
+    <label for="act" style="color: white;">ACT</label>
+    <input type="number" min="0" max="36" placeholder="ACT Score" id="act" name="act">
+
+    <label for="race" style="color: white;">Race</label>
+    <select id="race" name="race" required>
+        <option style="color: black;" value="">Select Race</option>
+        <option style="color: black;" value="Asian">Asian</option>
+        <option style="color: black;" value="Black or African American">Black or African American</option>
+        <option style="color: black;" value="Hispanic or Latino">Hispanic or Latino</option>
+        <option style="color: black;" value="White">White</option>
+        <option style="color: black;" value="Other">Other</option>
+    </select>
+
+    <label for="gender" style="color: white;">Gender</label>
+    <select id="gender" name="gender" required>
+        <option style="color: black;" value="">Select Gender</option>
+        <option style="color: black;" value="Male">Male</option>
+        <option style="color: black;" value="Female">Female</option>
+        <option style="color: black;" value="Non-binary">Non-binary</option>
+        <option style="color: black;" value="Prefer not to say">Prefer not to say</option>
+    </select>
+
+    <label for="income" style="color: white;">Income</label>
+    <select id="income" name="income" required>
+        <option style="color: black;" value="">Select Income</option>
+        <option style="color: black;" value="$30,000">$30,000</option>
+        <option style="color: black;" value="$30,000 - $60,000">$30,000 - $60,000</option>
+        <option style="color: black;" value="$60,000 - $90,000">$60,000 - $90,000</option>
+        <option style="color: black;" value="$90,000 - $120,000">$90,000 - $120,000</option>
+        <option style="color: black;" value="> $120,000">> $120,000</option>
+    </select>
 
     <button type="submit">Save</button>
 </form>
