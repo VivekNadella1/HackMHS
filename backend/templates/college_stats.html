@@ -125,18 +125,7 @@
     </style>
 </head>
 <body>
-<nav class="navbar">
-    <img jsname="uLHQEd" class="BiCYpc" width="40" height="40" src="https://lh3.googleusercontent.com/pw/AP1GczMdYKlUq_q-30Jvr5t48iIiyymqyaIjopiW8fUxKbf4ks9N3tUTUY4iOsL7hMG27xLeMHRdC3beOjXPLDOW8Z0OUHwvYjNL4gUJQL6U2Ilb82O8cWQDhO7YSfDs2UHlu2AzQAtQrCKWUUBbXKbhnvJx=w400-h400-s-no-gm?authuser=1" data-iml="7079.799999952316" style="transform: translate3d(0px, 0px, 0px) rotate(0deg); margin: 20px;" aria-label="Photo - Square - May 18, 2024, 12:44:19 AM">
-    <a href="homepage" class="navLink">Home</a>
-    <a href="{% url 'college' %}" class="navLink">College Chancing</a>
-    <a href="{% url 'college_tips' %}" class="navLink">College Tips</a>
-    {% if user.is_authenticated %}
-    <a href="" class="navRight"> Hi, {{ username }}</a>
-    {% else %}
-    <a href="login" class="navRight">Login</a>
-    <a href="signup" class="navRight">Sign Up</a>
-    {% endif %}
-</nav>
+
 <div class="background">
     <div class="shape"></div>
     <div class="shape"></div>
